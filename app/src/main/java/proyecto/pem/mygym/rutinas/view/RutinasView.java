@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import proyecto.pem.mygym.AppMediador;
 import proyecto.pem.mygym.R;
@@ -77,6 +78,7 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
             transaccion.addToBackStack(null);
             transaccion.commit();
             // Quita la visibilidad al boton flotante (para que no aparezca en el detalle)
+            añadirRutina.setVisibility(View.GONE);
 
             // realiza la transaccion
             getSupportFragmentManager().executePendingTransactions();
@@ -97,6 +99,8 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
         super.onBackPressed();
         presenterRutinas.eliminarDatos();
         presenterRutinas.obtenerDatos();
+        añadirRutina.setVisibility(View.VISIBLE);
+
     }
 
     @Override
