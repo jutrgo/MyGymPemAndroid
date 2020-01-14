@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1" >
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dip"
+                    android:layout_gravity="center"
+                    android:text=" Dorsales y triceps " >
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/estiramiento1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="311dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/e1"></ImageView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/descripcion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="3dip"
+                    android:text="De pie o sentada, con los brazos sobre la cabeza, se sostiene un codo con la mano contraria. Lentamente, tiramos el codo hacia la nuca. Se recomienda aguantar 15 segundos con cada brazo" >
+                </TextView>
+
+            </TableRow>
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dip"
+                    android:layout_gravity="center"
+                    android:text=" Dorsal e intercostal " >
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/estiramiento2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="311dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/e2"></ImageView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/descripcion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="3dip"
+                    android:text="De pie o sentada, con las piernas ligeramente separadas, estiramos alternativamente los brazos intentando alargar una mano más que la otra. Se repite dos veces y aguantamos 5 segundos cada mano. Si eligimos sentadas también estiraremos la espalda. 20 segundos serían suficiente" >
+                </TextView>
+
+            </TableRow>
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dip"
+                    android:layout_gravity="center"
+                    android:text=" Gemelos y tendones " >
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/estiramiento3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="311dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/e3"></ImageView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/descripcion3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="3dip"
+                    android:text="Flexionamos una pierna y la otra la estiramos. Realmente es un buen ejercicio de estiramiento no solo para los gemelos y tendones sino la pierna en general. Estaremos 15 segundos con cada pierna." >
+                </TextView>
+
+            </TableRow>
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dip"
+                    android:layout_gravity="center"
+                    android:text=" Cuadriceps " >
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/estiramiento4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="311dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/e4"></ImageView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/descripcion4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="3dip"
+                    android:text="Para estirar los cuádriceps y la rodilla, nos sujetaremos la parte posterior de un pie con la mano, tirando de él lentamente hacia las nalgas. Aguantamos 30 segundos con cada pierna." >
+                </TextView>
+
+            </TableRow>
+
+
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dip"
+                    android:layout_gravity="center"
+                    android:text=" Piernas " >
+                </TextView>
+
+            </TableRow>
+
+            <TableRow>
+
+                <ImageView
+                    android:id="@+id/estiramiento5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="311dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/e5"></ImageView>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/descripcion5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="3dip"
+                    android:text="Tumbada, con una pierna estirada y con otra flexionada hacia el pecho. Estamos con casa pierna 10 segundos." >
+                </TextView>
+
+            </TableRow>
+
+
+
+
+
+
+        </TableLayout>
+    </RelativeLayout>
+
+</ScrollView>

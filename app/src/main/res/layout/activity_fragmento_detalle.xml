@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:layout_editor_absoluteY="81dp">
+
+
+	<TextView
+		android:id="@+id/nombreEjercicios"
+		android:layout_width="126dp"
+		android:layout_height="60dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="16dp"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.498"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/imagenDeEjercicio"
+		tools:ignore="MissingConstraints" />
+
+	<ImageView
+		android:id="@+id/imagenDeEjercicio"
+		android:layout_width="406dp"
+		android:layout_height="282dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="48dp"
+		android:contentDescription="@string/app_name"
+		app:layout_constraintBottom_toTopOf="@+id/name"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.501"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="MissingConstraints" />
+
+	<TextView
+		android:id="@+id/infoEjercicio"
+		android:layout_width="400dp"
+		android:layout_height="201dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/nombreEjercicios"
+		app:layout_constraintVertical_bias="0.365"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteX="5dp" />
+
+	<ScrollView
+		android:id="@+id/scrollView2"
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteY="496dp">
+
+
+	</ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
+
+

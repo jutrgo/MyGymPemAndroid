@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeView">
+
+    <ImageView
+        android:id="@+id/gymgym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/gym"
+        android:contentDescription="@string/background_image"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/master_frame"
+        android:layout_width="240dp"
+        android:layout_height="245dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/corner_bg"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        app:layout_anchor="@+id/gymgym"
+        app:layout_anchorGravity="top|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="69dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center"
+        android:background="@drawable/t1"
+        android:contentDescription="@string/app_icon" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="200dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:textColorHint="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/txtBienvenido"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/welcome"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/ButtonEntrar"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/borde_redondo"
+            android:elevation="4dp"
+            android:fontFamily="@font/qanelas"
+            android:text="@string/entrar"
+            android:theme="@style/ThemeOverlay.MyDarkButton"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="605dp" />
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
