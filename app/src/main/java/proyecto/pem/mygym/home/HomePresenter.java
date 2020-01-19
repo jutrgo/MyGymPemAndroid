@@ -14,7 +14,6 @@ public class HomePresenter implements IHomePresenter {
 
     @Override
     public void toMenuPresenter() {
-        //appMediador.registerReceiver(receptorDeAvisos, AppMediador.AVISO_MENU);
         appMediador.getViewHome().toMenu();
 
     }
