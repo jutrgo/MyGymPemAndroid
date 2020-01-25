@@ -7,7 +7,6 @@ import android.content.Intent;
 import java.util.ArrayList;
 
 import proyecto.pem.mygym.AppMediador;
-import proyecto.pem.mygym.category.model.ItemCategory;
 import proyecto.pem.mygym.rutinas.model.Rutinas;
 import proyecto.pem.mygym.rutinas.model.RutinasModel;
 import proyecto.pem.mygym.rutinas.model.IRutinasModel;
@@ -31,6 +30,8 @@ public class RutinasPresenter implements IRutinasPresenter {
             } else if (intent.getAction().equals(AppMediador.AVISO_DETALLE_RUTINA)) {
                 String[] datosDetalle = intent.getStringArrayExtra(AppMediador.CLAVE_DETALLE_RUTINA);
                 appMediador.getViewRutinas().actualizarDetalle(datosDetalle);
+            } else if (intent.getAction().equals(AppMediador.AVISO_RUTINA_BORRADA)){
+                appMediador.getViewRutinas().rutinaBorrada();
             }
 
 
@@ -67,6 +68,12 @@ public class RutinasPresenter implements IRutinasPresenter {
     @Override
     public void eliminarDatos() {
         modelo.elimarDatos();
+    }
+
+    @Override
+    public void eliminarRutina(String id) {
+        appMediador.registerReceiver(receptorAvisos, AppMediador.AVISO_RUTINA_BORRADA);
+        modelo.eliminarRutina(id);
     }
 
 

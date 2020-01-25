@@ -9,4 +9,6 @@ public interface IRutinasPresenter {
     void toNuevaRutina();
 
     void eliminarDatos();
+
+    void eliminarRutina(String id);
 }

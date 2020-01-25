@@ -9,6 +9,8 @@ public interface IRutinasModel {
     void agregarRutina(String[] datos);
 
     void elimarDatos();
+
+    void eliminarRutina(String id);
 }
 
 

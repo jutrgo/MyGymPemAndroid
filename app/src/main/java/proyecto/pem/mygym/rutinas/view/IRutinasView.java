@@ -8,4 +8,5 @@ public interface IRutinasView {
 
     void toNuevaRutina();
 
+    void rutinaBorrada();
 }

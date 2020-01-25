@@ -85,13 +85,15 @@ public class RutinasModel implements IRutinasModel {
     @Override
     public void obtenerDetalle(int posicion) {
         Rutinas rutina = conjuntoDeRutinas.getListaDeRutinas().get(posicion);
-        String[] datos = new String[6];
+        String[] datos = new String[7];
         datos[0] = rutina.getCategoria();
         datos[1] = rutina.getEjercicio();
         datos[2] = rutina.getSeries();
         datos[3] = rutina.getRepeticiones();
         datos[4] = rutina.getTiempo();
         datos[5] = rutina.getObservaciones();
+        datos[6] = rutina.getId();
+
 
         Bundle extras = new Bundle();
         extras.putStringArray(AppMediador.CLAVE_DETALLE_RUTINA, datos);
@@ -154,6 +156,14 @@ public class RutinasModel implements IRutinasModel {
     public void elimarDatos() {
         conjuntoDeRutinas.eliminarRutinas();
         appMediador.setActualizarRutinas(true);
+    }
+
+    @Override
+    public void eliminarRutina(String id) {
+        final DatabaseReference rutinas = FirebaseDatabase.getInstance().getReference().child("rutinas").child(id);
+        rutinas.removeValue();
+        appMediador.sendBroadcast(AppMediador.AVISO_RUTINA_BORRADA,null);
+
     }
 
 

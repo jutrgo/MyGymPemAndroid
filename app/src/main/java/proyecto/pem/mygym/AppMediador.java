@@ -117,6 +117,8 @@ public class AppMediador extends Application {
 
 	public static final String CLAVE_DETALLE_RUTINA = "succes";
 	public static final String AVISO_DETALLE_RUTINA= "pem.proyecto.mygym.AVISO_DETALLE_RUTINA";
+	public static final String AVISO_RUTINA_BORRADA = "success";
+
 
 
 

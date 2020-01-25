@@ -1,6 +1,8 @@
 package proyecto.pem.mygym.rutinas.view;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,9 +10,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import proyecto.pem.mygym.AppMediador;
 import proyecto.pem.mygym.R;
+import proyecto.pem.mygym.menu.MenuView;
 import proyecto.pem.mygym.nuevaRutina.view.NuevaRutinaView;
 import proyecto.pem.mygym.rutinas.presenter.IRutinasPresenter;
 
@@ -22,6 +26,9 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
     private FragmentMasterRutinas fragmentMasterRutinas;
     private FragmentDetailRutinas fragmentDetailRutinas;
     private FloatingActionButton añadirRutina;
+    private Button btnElimnar;
+    private String id;
+
 
 
     @Override
@@ -31,6 +38,8 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
         appMediador = (AppMediador) this.getApplication();
         presenterRutinas = appMediador.getPresenterRutinas();
         appMediador.setViewRutinas(this);
+
+        id = "";
 
 
         if (findViewById(R.id.contenedorDeFragmentos) != null) {
@@ -50,6 +59,19 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
             }
 
         });
+
+        btnElimnar = findViewById(R.id.btnEliminar);
+        btnElimnar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenterRutinas.eliminarRutina(id);
+            }
+        });
+
+        btnElimnar.setVisibility(View.GONE);
+
+
+
 
     }
 
@@ -79,6 +101,8 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
             transaccion.commit();
             // Quita la visibilidad al boton flotante (para que no aparezca en el detalle)
             añadirRutina.setVisibility(View.GONE);
+            btnElimnar.setVisibility(View.VISIBLE);
+
 
             // realiza la transaccion
             getSupportFragmentManager().executePendingTransactions();
@@ -100,6 +124,7 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
         presenterRutinas.eliminarDatos();
         presenterRutinas.obtenerDatos();
         añadirRutina.setVisibility(View.VISIBLE);
+        btnElimnar.setVisibility(View.GONE);
 
     }
 
@@ -158,6 +183,7 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
         fragmentDetailRutinas.actualizarRepeticiones((String) datos[3]);
         fragmentDetailRutinas.actualizarTiempo((String) datos[4]);
         fragmentDetailRutinas.actualizarObservaciones((String) datos[5]);
+        id = (String) datos[6];
 
     }
 
@@ -167,4 +193,11 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
         Intent intent = new Intent(getApplicationContext(), NuevaRutinaView.class);
         startActivity(intent);
     }
+
+    @Override
+    public void rutinaBorrada() {
+        onBackPressed();
+    }
+
+
 }
