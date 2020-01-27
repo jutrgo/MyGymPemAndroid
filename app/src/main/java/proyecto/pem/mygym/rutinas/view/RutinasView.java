@@ -47,8 +47,6 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
             fragmentMasterRutinas = new FragmentMasterRutinas();
             getSupportFragmentManager().beginTransaction().add(R.id.contenedorDeFragmentos, fragmentMasterRutinas).commit();
         }
-        String hola = getPackageName();
-        Log.d("Holaaaaa", hola);
 
         añadirRutina = findViewById(R.id.fab);
         añadirRutina.setOnClickListener(new android.view.View.OnClickListener() {
@@ -69,19 +67,13 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
         });
 
         btnElimnar.setVisibility(View.GONE);
-
-
-
-
     }
 
 
     @Override
     protected void onStart() {
         super.onStart();
-        // TODO Solicitar al presentador que recupere los datos desde el modelo.
         presenterRutinas.obtenerDatos();
-
     }
 
 
@@ -107,19 +99,14 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
             // realiza la transaccion
             getSupportFragmentManager().executePendingTransactions();
         }
-        // TODO Solicitar al presentador que trate el item seleccionado.
         presenterRutinas.obtenerDetalle(posicion);
 
     }
 
 
-    // Redefinicion del metodo onBackPressed para que si se tiene un dispositivo de panel unico, y el boton
-    // flotante no esta visible (esta el fragmento detalle en pantalla), reemplace el fragmento detalle por el
-    // fragmento maestro. En cualquier otro caso, la actividad debe finalizar (porque se quiere salir de ella)
-
     @SuppressLint("RestrictedApi")
     @Override
-    public void onBackPressed() { // este metodo es para del datalle al maestro, y del maestro al menu
+    public void onBackPressed() {
         super.onBackPressed();
         presenterRutinas.eliminarDatos();
         presenterRutinas.obtenerDatos();
@@ -134,47 +121,14 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
     }
 
 
-
-
-
-  /*  @SuppressLint("RestrictedApi")
-    @Override
-    public void onBackPressed(){
-        if (findViewById(R.id.contenedorDeFragmentos)!=null){
-        //es panel único
-        //está en la vista del detalle
-        FragmentTransaction transaccion = getSupportFragmentManager().beginTransaction();
-        transaccion.replace(R.id.contenedorDeFragmentos, fragmentMasterRutinas);
-        transaccion.addToBackStack(null);
-        transaccion.commit();
-        presenterRutinas.obtenerDatos();
-
-    }else {
-        //no es panel único
-        finish();
-    }*/
-
-
-    // TODO Añadir el método actualizarMaestro(Object[] datos) que actualiza la lista maestro con los datos
-    // recibidos por parámetros. En cada entrada del vector, está el nombre de una receta.
     @Override
     public void actualizarMaestro(Object[] datos) {
-        // TODO Dentro del método actualizarMaestro(Object[] datos), crear la lista maestro con los nombres
-        // de las recetas que entran por parámetros.
         fragmentMasterRutinas.crearLista((String[]) datos);
-        // TODO Dentro del método actualizarMaestro(Object[] datos), si es una pantalla multi-panel, presentar
-        // el detalle de la primera receta.
         if (findViewById(R.id.contenedorDeFragmentos) == null) {
             presenterRutinas.obtenerDetalle(0);
         }
-
-
     }
 
-    // TODO Añadir el método actualizarDetalle(Object[] datos) que actualiza los valores del detalle,
-    // teniendo en cuenta que en la posición 0 del vector está el nombre de la receta y en qué se usa
-    // para realizarla, en la posición 1 del vector está la imagen como un Bitmap y en en la posición 3
-    // del vector está la descripción de la receta.
     @Override
     public void actualizarDetalle(Object[] datos) {
         fragmentDetailRutinas.actualizarCategoria((String) datos[0]);
@@ -184,9 +138,7 @@ public class RutinasView extends AppCompatActivity implements IRutinasView,
         fragmentDetailRutinas.actualizarTiempo((String) datos[4]);
         fragmentDetailRutinas.actualizarObservaciones((String) datos[5]);
         id = (String) datos[6];
-
     }
-
 
     @Override
     public void toNuevaRutina() {

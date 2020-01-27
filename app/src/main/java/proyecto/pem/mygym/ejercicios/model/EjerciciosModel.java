@@ -22,8 +22,8 @@ public class EjerciciosModel implements IEjerciciosModel {
     }
 
 
-    // metodo obtenerDatos() que recupera los datos de la lista de ejericios del
-    // conjunto de ejericios y envia una notificacion del tipo AVISO_DATOS_LISTOS al presentador.
+    // metodo obtenerDatos() que recupera los datos de la lista de ejercicios del
+    // conjunto de ejercicios y envia una notificacion del tipo AVISO_DATOS_LISTOS al presentador.
     @Override
     public void obtenerDatos(String categoria) {
         Bundle extras = new Bundle();
@@ -31,8 +31,8 @@ public class EjerciciosModel implements IEjerciciosModel {
         appMediador.sendBroadcast(AppMediador.AVISO_DATOS_LISTOS, extras);
     }
 
-    // metodo obtenerDetalle(int posicion) que recupera los datos del detalle de un ejericio del
-    // conjunto de ejericios y envia una notificacion del tipo AVISO_DETALLE_LISTO al presentador.
+    // metodo obtenerDetalle(int posicion) que recupera los datos del detalle de un ejercicio del
+    // conjunto de ejercicios y envia una notificacion del tipo AVISO_DETALLE_LISTO al presentador.
     @Override
     public void obtenerDetalle(int posicion, String categoria) {
         ItemEjercicios ejercicios = conjuntoDeEjercicios.getListaDeEjercicios(categoria).get(posicion);

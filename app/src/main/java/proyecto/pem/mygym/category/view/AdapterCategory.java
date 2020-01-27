@@ -49,7 +49,6 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.FilaVi
             super(view);
             view.setClickable(true);
             item = (TextView) view.findViewById(R.id.item_maestro);
-            // categoria = (TextView) view.findViewById(R.id.item_maestro_categoria);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

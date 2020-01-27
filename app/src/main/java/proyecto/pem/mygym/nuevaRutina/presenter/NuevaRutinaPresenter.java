@@ -66,7 +66,4 @@ public class NuevaRutinaPresenter implements INuevaRutinaPresenter {
         RutinasModel.getInstance().agregarRutina(datos);
         appMediador.registerReceiver(receptorAvisos, AppMediador.AVISO_AGREGAR_RUTINA);
     }
-
-    // TODO Implementar el metodo tratarAgregar() que lanza la vista de agregacion por medio del mediador.
-
 }

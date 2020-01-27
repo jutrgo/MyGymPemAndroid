@@ -13,7 +13,6 @@ public class EstiramientosPresenter implements IEstiramientosPresenter {
 
     @Override
     public void toMenuPresenter() {
-        //appMediador.registerReceiver(receptorDeAvisos, AppMediador.AVISO_MENU);
         appMediador.getViewHome().toMenu();
 
     }

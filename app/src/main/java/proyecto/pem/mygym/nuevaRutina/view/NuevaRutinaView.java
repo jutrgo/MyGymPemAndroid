@@ -64,9 +64,8 @@ public class NuevaRutinaView extends AppCompatActivity implements INuevaRutinaVi
 
     @SuppressLint("RestrictedApi")
     @Override
-    public void onBackPressed(){ // este metodo es para del datalle al maestro, y del maestro al menu
+    public void onBackPressed(){
         super.onBackPressed();
-        //presenterNuevaRutina.obtenerDatos();
     }
 
     @Override
@@ -106,22 +105,5 @@ public class NuevaRutinaView extends AppCompatActivity implements INuevaRutinaVi
     public void toRutinas() {
         finish();
     }
-
-  /*  @SuppressLint("RestrictedApi")
-    @Override
-    public void onBackPressed(){
-        if (findViewById(R.id.contenedorDeFragmentos)!=null){
-        //es panel único
-        //está en la vista del detalle
-        FragmentTransaction transaccion = getSupportFragmentManager().beginTransaction();
-        transaccion.replace(R.id.contenedorDeFragmentos, fragmentMasterRutinas);
-        transaccion.addToBackStack(null);
-        transaccion.commit();
-        presenterRutinas.obtenerDatos();
-
-    }else {
-        //no es panel único
-        finish();
-    }*/
 
 }
