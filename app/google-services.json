@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "574432442443",
+    "firebase_url": "https://my-gym-eaecd.firebaseio.com",
+    "project_id": "my-gym-eaecd",
+    "storage_bucket": "my-gym-eaecd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574432442443:android:79d0c524f989027849f5ce",
+        "android_client_info": {
+          "package_name": "proyecto.pem.mygym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574432442443-9hkb81clmlt8i9g08ij8rc6e0nga2cna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD-Dw-qSxxF5jqHsJNyICaH3k8U9QaUV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574432442443-9hkb81clmlt8i9g08ij8rc6e0nga2cna.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
